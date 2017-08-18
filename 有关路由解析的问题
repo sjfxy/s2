@@ -1,0 +1,50 @@
+首先这里所有的路由都是基于tp5/public/index.php 为基础的相对路径的路由配置
+www.sj2.com/tp5/public/ 
+Route::get("/","Index/index");www.sj2.com/tp5/public/index.php/index/index/index
+所以如果配置了域名
+www.servername.com/te www.sj2.com/tp5/public/index/index/index
+一样
+index.php隐藏了
+只要apache开启了重新模式
+就可以了
+默认的为Index 模块
+Index index 
+测试用的是tp5
+这里进行路由跳转的时候 如果开启了路由解析需要将其 页面静态化 去除 
+在thinkphp3.2.2 版本
+U地址生成
+->url('Admin/Index/index');
+U('index/index');//如果不指定模块默认为Home Index
+如果指定模块 Module/Controller/Action
+$this->redirect(U('user/login'),$message,4);
+$this->sucess(U(),$messge,4);
+
+$this->sucess(url('admin/login'),$data,4);
+
+U url
+S Cache cache
+C Config
+L
+E
+M D
+model
+controller
+action 调用实体类
+A
+如果是调用
+Index/Index/index vaild crate swich 
+$this->
+action();
+//可以的
+Db:: 
+use think\db;
+所以这里的是路由的话就可以完全的开启动态的效果
+模板语法和tp3.2.3一样没有变化
+
+weiphp onethink
+
+cms dedecms phpcms cmstop 
+
+wordpress discuz 
+
+ecshop tpshop

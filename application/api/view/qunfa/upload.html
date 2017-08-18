@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <script type="text/javascript">
+$(function(){
+	var str=$('#t').val();
+	var file=$('#m')
+	$('#myform').submit(function(){
+		$.post('https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token='+str+'',
+				$('#myform').serialize(),
+				function(data)
+				{
+			alert(data);
+		        },
+		        'json'
+		);
+	});
+});
+
+</script> -->
+</head>
+<body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<form id="myform" action="https://api.weixin.qq.com/cgi-bin/material/add_material?access_token={$token}&type=thumb" enctype="multipart/form-data" method="post">
+<input type="file"name="media" id='m'>
+<input type="hidden" id='t' value="{$token}">
+<button type="submit" id="button">提交</button>
+</form>
+
+
+</body>
+</html>

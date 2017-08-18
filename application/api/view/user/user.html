@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<title>网页授权Demo</title>
+{load href="/static/css/weui.min.css"/}
+{css href="/static/css/example.css" /}
+
+</head>
+<body>
+
+openid:{$openid}
+<br>
+nickname:{$nickname}
+<br>
+city:{$city}
+<br>
+pronice:{$province}
+<br>
+sex:
+{if condition="$sex == 1"}
+男
+{elseif condition="$sex == 2"}
+女
+{else /}
+未填写相关信息 
+{/if}
+<br>
+<span>头像</span>:{$headimgurl}
+<img alt="个人头像" src="{$headimgurl}">
+</body>
+</html>
