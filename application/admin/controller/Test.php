@@ -1,10 +1,28 @@
 <?php
 namespace app\admin\controller;
-use app\common\builder\ZBuilder;
-class Test extends Admin
+
+use think\Controller;
+use wyiyun\Common;
+/**
+ * 
+ * @author 时
+ * @package app\admin\controller
+ * @description:测试控制器
+ *
+ */
+class Test extends Controller
 {
     public function index(){
       
-       return  ZBuilder::make('form')->setPageTitle('添加')->fetch();
+      //session('user_id',rand(1,1000));
+        // 删除（当前作用域）
+        //session('user_id', null);
+        echo 'ss';
+    }
+    public function ss(){
+        $wyiyun=new Common(config('appkey'), config('appsecret'));
+        
+        $data=$wyiyun->syctoaccount('werqwt');
+      
     }
 }
